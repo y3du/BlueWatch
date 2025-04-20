@@ -1,0 +1,16 @@
+.report-section {
+    text-align: center;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

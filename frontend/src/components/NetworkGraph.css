@@ -1,0 +1,52 @@
+.network-graph {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.network-graph h2 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.graph-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.graph-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.emotion {
+  background-color: #ff4081;
+}
+
+.dot.word {
+  background-color: #2196f3;
+}

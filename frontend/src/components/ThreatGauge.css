@@ -1,0 +1,40 @@
+.threat-gauge {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.threat-gauge h2 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.gauge-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gauge-value {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.gauge-value .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.gauge-value .label {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}

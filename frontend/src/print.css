@@ -1,0 +1,294 @@
+/* Print-specific styles */
+@media print {
+  /* Reset page margins */
+  @page {
+    margin: 1cm !important;
+    size: A4 portrait;
+  }
+
+  /* Hide elements we don't want to print */
+  .generate-pdf-button,
+  button,
+  .dashboard-loading {
+    display: none !important;
+  }
+
+  /* General page setup */
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 11pt;
+    line-height: 1.3;
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Dashboard layout */
+  .dashboard {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    max-width: none !important;
+  }
+
+  .dashboard-header {
+    text-align: center !important;
+    margin: 0 0 1cm 0 !important;
+    padding: 0 0 0.5cm 0 !important;
+    border-bottom: 2px solid #000 !important;
+  }
+
+  .dashboard-title {
+    font-size: 24pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #000 !important;
+  }
+
+  /* Grid layout */
+  .dashboard-grid {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* First row - UserCard and ThreatGauge */
+  .dashboard-grid > :nth-child(1),
+  .dashboard-grid > :nth-child(2) {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+    margin: 0 1% 0.5cm 1% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Second row - NetworkGraph */
+  .dashboard-grid > :nth-child(3) {
+    width: 98% !important;
+    margin: 0 1% 0.5cm 1% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Third row - EmotionBarGraph and SeverityHistogram */
+  .dashboard-grid > :nth-child(4),
+  .dashboard-grid > :nth-child(5) {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+    margin: 0 1% 0.5cm 1% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Fourth row - WordCloud */
+  .dashboard-grid > :nth-child(6) {
+    width: 98% !important;
+    margin: 0 1% 0.5cm 1% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Fifth row - TimelineChart */
+  .dashboard-grid > :nth-child(7) {
+    width: 98% !important;
+    margin: 0 1% 0.5cm 1% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Sixth row - TweetList */
+  .dashboard-grid > :nth-child(8) {
+    width: 98% !important;
+    margin: 0 1% 0.5cm 1% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Component specific styles */
+  .user-card,
+  .threat-gauge,
+  .network-graph,
+  .emotion-graph,
+  .severity-histogram,
+  .word-cloud,
+  .timeline-chart {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+    padding: 0.3cm !important;
+    margin: 0 !important;
+    background: #fff !important;
+  }
+
+  /* Fix word cloud container and title */
+  .word-cloud-container {
+    position: relative !important;
+    padding-top: 0.5cm !important;
+  }
+
+  .word-cloud-container h2 {
+    position: relative !important;
+    margin: 0 0 0.5cm 0 !important;
+    padding: 0 !important;
+    font-size: 14pt !important;
+    color: #000 !important;
+    text-align: center !important;
+    background: #fff !important;
+  }
+
+  /* Charts and visualizations */
+  canvas,
+  svg {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Word cloud legend */
+  .word-cloud-legend {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    margin-top: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid #000 !important;
+  }
+
+  .legend-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    font-size: 11pt !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  .color-dot {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+  }
+
+  .color-dot.positive {
+    background-color: #4ecdc4 !important;
+  }
+
+  .color-dot.negative {
+    background-color: #ff8c00 !important;
+  }
+
+  .color-dot.flagged {
+    background-color: #ff4d4d !important;
+  }
+
+  /* Text content */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5cm 0 !important;
+    color: #000 !important;
+    page-break-after: avoid !important;
+  }
+
+  p, span, div {
+    color: #000 !important;
+    background: none !important;
+    margin-bottom: 0.3cm !important;
+  }
+
+  /* Tables */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 0.5cm !important;
+    page-break-inside: avoid !important;
+  }
+
+  td, th {
+    border: 1px solid #000 !important;
+    padding: 0.2cm !important;
+    text-align: left !important;
+  }
+
+  /* Fix table columns */
+  .tweet-list-table td:last-child,
+  .tweet-list-table th:last-child {
+    display: none !important;
+  }
+
+  .tweet-list-table td,
+  .tweet-list-table th {
+    padding: 0.3cm !important;
+  }
+
+  .tweet-list-table .emotion-column {
+    width: 15% !important;
+    text-align: center !important;
+  }
+
+  .tweet-list-table .severity-column {
+    width: 10% !important;
+    text-align: center !important;
+  }
+
+  .tweet-list-table .time-column {
+    width: 15% !important;
+  }
+
+  /* Links */
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+
+  /* Remove backgrounds and shadows */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* User profile card */
+  .profile-card {
+    border: 1px solid #000 !important;
+    padding: 0.5cm !important;
+    margin-bottom: 1cm !important;
+  }
+
+  .profile-stats {
+    display: flex !important;
+    justify-content: space-around !important;
+    margin: 0.5cm 0 !important;
+  }
+
+  /* Tweet list */
+  .tweet-card {
+    border: 1px solid #000 !important;
+    padding: 0.5cm !important;
+    margin: 0.5cm 0 !important;
+  }
+
+  /* Ensure all text is visible */
+  .tweet-content,
+  .tweet-metrics,
+  .flagged-words,
+  .severity-score {
+    color: black !important;
+    margin: 0.2cm 0 !important;
+  }
+
+  /* Force background colors for severity indicators */
+  [style*="background-color"] {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  /* Remove any fixed positioning */
+  [style*="position: fixed"],
+  [style*="position:fixed"] {
+    position: static !important;
+  }
+
+  /* Ensure proper page breaks */
+  .tweet-list,
+  .network-graph,
+  .emotion-graph,
+  .severity-histogram {
+    break-before: page !important;
+  }
+}

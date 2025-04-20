@@ -1,0 +1,120 @@
+.word-cloud-container {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  grid-column: 1 / -1;  /* Make it take full width in grid */
+}
+
+.word-cloud-container h2 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.word-cloud {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.8), rgba(255,255,255,0.95));
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.word-cloud svg {
+  max-width: 100%;
+  height: 100%;
+}
+
+.word-cloud svg text {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.word-cloud-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  max-width: 200px;
+  white-space: nowrap;
+}
+
+.word-cloud-tooltip strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Legend styles */
+.word-cloud-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.legend-item:hover {
+  transform: translateY(-1px);
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.color-dot.positive {
+  background-color: #4ecdc4;
+}
+
+.color-dot.negative {
+  background-color: #ff8c00;
+}
+
+.color-dot.flagged {
+  background-color: #ff4d4d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .word-cloud {
+    height: 400px;
+  }
+
+  .word-cloud-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .legend-item {
+    width: 100%;
+    justify-content: center;
+  }
+} 

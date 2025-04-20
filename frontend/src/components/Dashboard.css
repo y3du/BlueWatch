@@ -1,0 +1,156 @@
+.dashboard {
+  padding: 20px;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.dashboard-title {
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.report-metadata {
+  margin: 15px 0;
+  color: #666;
+}
+
+.report-metadata p {
+  margin: 5px 0;
+}
+
+.generate-pdf-button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.generate-pdf-button:hover {
+  background-color: #1991db;
+}
+
+.generate-pdf-button:active {
+  transform: translateY(1px);
+}
+
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #1da1f2;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* First row - UserCard and ThreatGauge */
+.dashboard-grid > :nth-child(1),
+.dashboard-grid > :nth-child(2) {
+  grid-column: span 1;
+}
+
+/* Second row - NetworkGraph */
+.dashboard-grid > :nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Third row - EmotionBarGraph and SeverityHistogram */
+.dashboard-grid > :nth-child(4),
+.dashboard-grid > :nth-child(5) {
+  grid-column: span 1;
+}
+
+/* Fourth row - WordCloud */
+.dashboard-grid > :nth-child(6) {
+  grid-column: span 2;
+}
+
+/* Fifth row - TimelineChart */
+.dashboard-grid > :nth-child(7) {
+  grid-column: span 2;
+}
+
+/* Sixth row - TweetList */
+.dashboard-grid > :nth-child(8) {
+  grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dashboard-grid > * {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 0.75rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .generate-pdf-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 0.5rem;
+  }
+
+  .dashboard-grid {
+    gap: 1rem;
+  }
+}

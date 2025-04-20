@@ -1,0 +1,196 @@
+.data-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 2rem;
+  background: #0B0B45;
+}
+
+.data-input-form {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(11, 11, 69, 0.9);
+  border-radius: 30px;
+  padding: 60px;
+  border: 1px solid rgba(65, 253, 254, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.data-input-form h2 {
+  color: #41FDFE;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #D3D3D3;
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.date-group input[type="date"],
+.default-btn,
+.submit-btn {
+  width: 100%;
+  height: 70px;
+  background: rgba(211, 211, 211, 0.05);
+  border: 1px solid rgba(65, 253, 254, 0.2);
+  border-radius: 15px;
+  padding: 0 30px;
+  font-size: 1.2rem;
+  color: #D3D3D3;
+  transition: all 0.3s ease;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='%2341FDFE'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.date-group input[type="date"]:focus {
+  outline: none;
+  border-color: #41FDFE;
+}
+
+.timeline {
+  margin-top: 3rem;
+}
+
+.timeline h3 {
+  color: #41FDFE;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.date-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.date-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date-group label {
+  color: #D3D3D3;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.date-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(80%) sepia(72%) saturate(4766%) hue-rotate(155deg) brightness(103%) contrast(105%);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.default-btn,
+.submit-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.default-btn {
+  background: transparent;
+  border: 2px solid #41FDFE;
+  color: #41FDFE;
+}
+
+.default-btn:hover {
+  background: rgba(65, 253, 254, 0.1);
+}
+
+.submit-btn {
+  background: #41FDFE;
+  color: #0B0B45;
+  border: none;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background: #D3D3D3;
+}
+
+@media (max-width: 900px) {
+  .data-input-form {
+    max-width: 700px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-input-form {
+    padding: 30px 20px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .data-input-form h2 {
+    font-size: 2rem;
+  }
+
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group input,
+  .form-group select,
+  .date-group input[type="date"],
+  .default-btn,
+  .submit-btn {
+    height: 50px;
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+} 

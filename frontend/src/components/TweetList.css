@@ -1,0 +1,340 @@
+.tweet-list-container {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  grid-column: 1 / -1;  /* Make it take full width in grid */
+}
+
+.tweet-list-container h2 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.tweet-list-table-container {
+  overflow-x: auto;
+  margin: 0 -1rem;  /* Negative margin to allow scroll on mobile */
+  padding: 0 1rem;
+}
+
+.tweet-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+}
+
+.tweet-list-table th,
+.tweet-list-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+  background: #ffffff;
+}
+
+.tweet-list-table th {
+  font-weight: 600;
+  color: #000000;
+  background-color: #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid #0066cc;
+}
+
+/* Row styles */
+.tweet-list-table tr.expanded {
+  background-color: #f8f9fa;
+}
+
+.tweet-list-table tr.lime-analysis-row {
+  background-color: #f8f9fa;
+}
+
+.tweet-list-table tr.lime-analysis-row td {
+  padding: 0;
+}
+
+/* Cell styles */
+.time-cell {
+  white-space: nowrap;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.text-cell {
+  min-width: 300px;
+  line-height: 1.4;
+  color: #000000;
+  font-weight: 500;
+}
+
+.emotion-cell {
+  white-space: nowrap;
+  color: #000000;
+  font-weight: 500;
+}
+
+.emotion-cell span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000000;
+}
+
+.severity-cell {
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+}
+
+.severity-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  min-width: 48px;
+}
+
+/* LIME Analysis Button */
+.lime-toggle-btn {
+  background-color: #f0f7ff;
+  border: 1px solid #0066cc;
+  color: #0066cc;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.lime-toggle-btn:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+tr.expanded .lime-toggle-btn {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* LIME Analysis Content */
+.lime-content {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-top: 2px solid #0066cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lime-section {
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lime-section h4 {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 0.5rem;
+}
+
+.lime-words {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+  background: #ffffff;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.lime-word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 0.85rem;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.lime-word .word {
+  font-weight: 500;
+}
+
+.lime-word .importance {
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+/* Tags and Entities */
+.tags, .entities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.entity-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.entity-type {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.entity-tag {
+  background-color: #e8f0fe;
+  color: #0066cc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Hover effects */
+.tweet-list-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tweet-list-table {
+    font-size: 0.85rem;
+  }
+  
+  .tweet-list-table th,
+  .tweet-list-table td {
+    padding: 0.75rem;
+  }
+  
+  .text-cell {
+    min-width: 200px;
+  }
+  
+  .lime-words {
+    grid-template-columns: 1fr;
+  }
+}
+
+.word-importance {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid #0066cc;
+}
+
+.word-importance-title {
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.word-importance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.word-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #0066cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.word-text {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.importance-value {
+  color: #000000;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  background: #e5e7eb;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: 1px solid #0066cc;
+}
+
+.positive {
+  color: #065f46;
+  background: #d1fae5;
+  border: 2px solid #34d399;
+  font-weight: 700;
+}
+
+.negative {
+  color: #991b1b;
+  background: #fee2e2;
+  border: 2px solid #f87171;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .word-importance {
+    padding: 1rem;
+  }
+
+  .word-importance-title {
+    font-size: 1rem;
+  }
+
+  .word-item {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .word-text {
+    font-size: 0.9375rem;
+  }
+
+  .importance-value {
+    font-size: 0.875rem;
+    padding: 0.3125rem 0.625rem;
+  }
+} 

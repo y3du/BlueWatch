@@ -1,0 +1,52 @@
+.timeline-chart-container {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.timeline-chart-container h2 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.timeline-chart {
+  width: 100%;
+  height: 400px;
+}
+
+/* Tooltip styles */
+.timeline-tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+  color: white;
+  font-size: 0.9rem;
+  max-width: 300px;
+}
+
+.tooltip-time {
+  color: #4ecdc4;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip-severity {
+  color: #ff4d4d;
+  font-weight: 500;
+}
+
+.tooltip-emotion {
+  color: #ffbb00;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip-text {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+} 
