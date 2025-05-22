@@ -1,6 +1,6 @@
-🌟 FinalPresentation
+🌟 BlueWatch
 
-FinalPresentation is a powerful full-stack web application that transforms data into actionable insights, likely focusing on social media sentiment or threat analysis. With a sleek React frontend and a robust Python backend, it delivers stunning visualizations and analytics through an intuitive dashboard. 🚀
+BlueWatch is a powerful full-stack web application that transforms data into actionable insights, likely focusing on social media sentiment or threat analysis. With a sleek React frontend and a robust Python backend, it delivers stunning visualizations and analytics through an intuitive dashboard. 🚀
 
 📋 Table of Contents
 
@@ -16,7 +16,7 @@ License
 Acknowledgements
 
 🌐 Overview
-FinalPresentation empowers users to input data, process it with advanced machine learning, and visualize results through dynamic charts and graphs. Whether analyzing emotions, detecting threats, or assessing severity, this app delivers insights via a centralized dashboard. Perfect for data enthusiasts and analysts alike! 📊
+BlueWatch empowers users to input data, process it with advanced machine learning, and visualize results through dynamic charts and graphs. Whether analyzing emotions, detecting threats, or assessing severity, this app delivers insights via a centralized dashboard. Perfect for data enthusiasts and analysts alike! 📊
 ✨ Key Features
 
 🔒 User Authentication: Secure login and user management.
@@ -61,7 +61,7 @@ Markdown, MarkupSafe, tqdm, spaCy, SymPy
 
 
 📂 Project Structure
-FinalPresentation/
+BlueWatch/
 │
 ├── backend/                    🐍 Python backend (API, ML, data processing)
 │   ├── app.py                  🚀 Main backend application
@@ -94,47 +94,47 @@ Explore the app's stunning visuals below:
 
 <p align="center">
   <img src="screenshots/1.png" alt="Dashboard" width="600"/><br>
-  <b>Dashboard</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/2.png" alt="Emotion Bar Graph" width="600"/><br>
-  <b>Emotion Bar Graph</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/3.png" alt="Threat Gauge" width="600"/><br>
-  <b>Threat Gauge</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/4.png" alt="Severity Histogram" width="600"/><br>
-  <b>Severity Histogram</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/5.png" alt="Word Cloud" width="600"/><br>
-  <b>Word Cloud</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/6.png" alt="Timeline Chart" width="600"/><br>
-  <b>Timeline Chart</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/7.png" alt="Network Graph" width="600"/><br>
-  <b>Network Graph</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/8.png" alt="Entity Table" width="600"/><br>
-  <b>Entity Table</b>
+  
 </p>
 
 <p align="center">
   <img src="screenshots/9.png" alt="Additional Visualization" width="600"/><br>
-  <b>Additional Visualization</b>
+  
 </p>
 
 
@@ -142,24 +142,9 @@ Explore the app's stunning visuals below:
 
 
 
-Word Cloud
-Timeline Chart
 
 
-
-
-
-
-
-
-
-
-Network Graph
-Entity<p align="center">
-  <img src="https://img.shields.io/badge/FinalPresentation-FullStack-blueviolet?style=for-the-badge" alt="Project Badge" />
-</p>
-
-# 🚀 FinalPresentation
+# 🚀 BlueWatch
 
 A powerful full-stack web application for real-time sentiment, threat, and entity analysis with interactive visualizations. Analyze data, view insights, and explore analytics with a beautiful dashboard.
 
@@ -191,7 +176,7 @@ A powerful full-stack web application for real-time sentiment, threat, and entit
 ## 📁 Project Structure
 
 ```
-FinalPresentation/
+BlueWatch/
 │
 ├── backend/      # Python backend (API, ML, data processing)
 │   ├── app.py    # Main backend application
