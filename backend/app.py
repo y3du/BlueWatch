@@ -38,27 +38,82 @@ USER_DATA = {
     "verified": False
 }
 
-# Mock Tweet Data (tied to the user above)
-BASE_DATE = datetime.utcnow() - timedelta(days=1)
+# Base date for tweet creation (1 day ago from current date, April 22, 2025)
+BASE_DATE = datetime.utcnow().replace(year=2025, month=4, day=21, hour=8, minute=0, second=0, microsecond=0)
+
+# Updated Mock Tweet Data with diverse emotions
 MOCK_THREAT_TWEETS = [
-    {"text": "Air Force One will be targeted in our next phase.",
-     "created_at": BASE_DATE.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
-     "public_metrics": {"like_count": 50, "retweet_count": 10, "reply_count": 16}},
-    {"text": "Weapons, supplies, and the plan are almost in place. The world will hear us.",
-     "created_at": BASE_DATE.strftime("%Y-%m-%dT15:30:00.000Z"),
-     "public_metrics": {"like_count": 4, "retweet_count": 0, "reply_count": 2}},
-    {"text": "Tomorrow, we take over Silicon Valley's tech giants.",
-     "created_at": BASE_DATE.strftime("%Y-%m-%dT18:45:00.000Z"),
-     "public_metrics": {"like_count": 99, "retweet_count": 34, "reply_count": 78}},
-    {"text": "The attack on the city will be devastating.",
-     "created_at": BASE_DATE.strftime("%Y-%m-%dT19:30:00.000Z"),
-     "public_metrics": {"like_count": 30, "retweet_count": 12, "reply_count": 8}},
-    {"text": "We will destroy everything they hold dear.",
-     "created_at": BASE_DATE.strftime("%Y-%m-%dT21:10:00.000Z"),
-     "public_metrics": {"like_count": 45, "retweet_count": 20, "reply_count": 15}},
-    {"text": "Death is the only justice for our enemies.",
-     "created_at": BASE_DATE.strftime("%Y-%m-%dT22:50:00.000Z"),
-     "public_metrics": {"like_count": 60, "retweet_count": 25, "reply_count": 18}},
+    {
+        "text": "Air Force One will be targeted in our next attack.",
+        "created_at": BASE_DATE.strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 50, "retweet_count": 10, "reply_count": 16}
+        # Emotion: Anger (due to "attack")
+    },
+    {
+        "text": "Weapons ready for the upcoming threat operation.",
+        "created_at": (BASE_DATE + timedelta(hours=1, minutes=30)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 15, "retweet_count": 5, "reply_count": 3}
+        # Emotion: Anger (due to "threat")
+    },
+    {
+        "text": "Feeling so happy celebrating our community’s unity today!",
+        "created_at": (BASE_DATE + timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 80, "retweet_count": 30, "reply_count": 25}
+        # Emotion: Joy (conveyed by "happy" and "celebrating")
+    },
+    {
+        "text": "Violence is our tool to end this regime.",
+        "created_at": (BASE_DATE + timedelta(hours=4, minutes=15)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 40, "retweet_count": 15, "reply_count": 10}
+        # Emotion: Anger (due to "violence")
+    },
+    {
+        "text": "A massive attack is planned for the capital.",
+        "created_at": (BASE_DATE + timedelta(hours=5, minutes=30)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 70, "retweet_count": 25, "reply_count": 20}
+        # Emotion: Anger (due to "attack")
+    },
+    {
+        "text": "We will destroy all opposition forces tonight.",
+        "created_at": (BASE_DATE + timedelta(hours=6, minutes=45)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 60, "retweet_count": 20, "reply_count": 15}
+        # Emotion: Anger (due to "destroy")
+    },
+    {
+        "text": "I’m heartbroken over the loss of our leader.",
+        "created_at": (BASE_DATE + timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 35, "retweet_count": 12, "reply_count": 8}
+        # Emotion: Sadness (conveyed by "heartbroken" and "loss")
+    },
+    {
+       "text": "I wished we would win, but we did NOT make it.",
+        "created_at": (BASE_DATE + timedelta(hours=13)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 30, "retweet_count": 10, "reply_count": 6}
+    },
+    {
+        "text": "I’m thrilled to announce our new peaceful initiative.",
+        "created_at": (BASE_DATE + timedelta(hours=10, minutes=30)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 55, "retweet_count": 22, "reply_count": 17}
+        # Emotion: Joy (conveyed by "thrilled" and "peaceful")
+    },
+    {
+        "text": "We will destroy their power base completely.",
+        "created_at": (BASE_DATE + timedelta(hours=11, minutes=45)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 65, "retweet_count": 28, "reply_count": 20}
+        # Emotion: Anger (due to "destroy")
+    },
+    {
+        "text": "I believe tomorrow will bring a brighter future for us all.",
+        "created_at": (BASE_DATE + timedelta(hours=13)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 30, "retweet_count": 10, "reply_count": 6}
+        # Emotion: Optimism (conveyed by "believe" and "brighter future")
+    },
+    {
+        "text": "I’m devastated by the betrayal of our allies.",
+        "created_at": (BASE_DATE + timedelta(hours=14, minutes=15)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")[:-3] + "Z",
+        "public_metrics": {"like_count": 50, "retweet_count": 19, "reply_count": 14}
+        # Emotion: Sadness (conveyed by "devastated" and "betrayal")
+    }
 ]
 
 # NLP Processing Functions

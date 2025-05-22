@@ -15,54 +15,102 @@
 }
 
 .word-cloud {
+  position: relative;
   width: 100%;
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.8), rgba(255,255,255,0.95));
-  border-radius: 10px;
+  background: white;
+  border-radius: 8px;
   overflow: hidden;
+  border: 1px solid #e5e7eb;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .word-cloud svg {
   max-width: 100%;
   height: 100%;
+  display: block;
+  overflow: visible;
 }
 
 .word-cloud svg text {
-  transition: all 0.3s ease;
+  transition: var(--transition-main);
   cursor: pointer;
 }
 
 .word-cloud-tooltip {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
+  background-color: white;
+  color: #1a1a1a;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
   font-size: 0.85rem;
   pointer-events: none;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 200px;
   white-space: nowrap;
+  border: 1px solid #e5e7eb;
 }
 
 .word-cloud-tooltip strong {
-  color: #fff;
+  color: #1a1a1a;
   display: block;
-  margin-bottom: 4px;
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+@media print {
+  .word-cloud {
+    height: 350px;
+    margin: 0;
+    padding: 1rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .word-cloud svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    max-height: 350px;
+    transform: scale(0.9);
+  }
+
+  .word-cloud svg text {
+    font-family: Arial, sans-serif !important;
+    paint-order: stroke;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+  }
+
+  .legend {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .word-cloud-tooltip {
+    display: none !important;
+  }
 }
 
 /* Legend styles */
 .word-cloud-legend {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e5e7eb;
 }
 
 .legend-item {
@@ -70,23 +118,26 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #536471;
   padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #e5e7eb;
 }
 
 .legend-item:hover {
   transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #0066cc;
 }
 
 .color-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .color-dot.positive {
@@ -94,11 +145,11 @@
 }
 
 .color-dot.negative {
-  background-color: #ff8c00;
+  background-color: #ffd93d;
 }
 
 .color-dot.flagged {
-  background-color: #ff4d4d;
+  background-color: #ff6b6b;
 }
 
 /* Responsive adjustments */

@@ -1,16 +1,14 @@
-.tweet-list-container {
+.tweet-list {
   background: white;
   border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 1rem 0;
-  grid-column: 1 / -1;  /* Make it take full width in grid */
 }
 
-.tweet-list-container h2 {
+.tweet-list h2 {
+  margin: 0 0 1rem 0;
   color: #1a1a1a;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 
@@ -24,39 +22,29 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  background: #ffffff;
-  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .tweet-list-table th,
 .tweet-list-table td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid #d1d5db;
-  background: #ffffff;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1a1a1a;
 }
 
 .tweet-list-table th {
+  text-align: left;
+  background-color: #f8f9fa;
   font-weight: 600;
-  color: #000000;
-  background-color: #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  border-bottom: 2px solid #0066cc;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 /* Row styles */
 .tweet-list-table tr.expanded {
   background-color: #f8f9fa;
-}
-
-.tweet-list-table tr.lime-analysis-row {
-  background-color: #f8f9fa;
-}
-
-.tweet-list-table tr.lime-analysis-row td {
-  padding: 0;
 }
 
 /* Cell styles */
@@ -69,13 +57,13 @@
 .text-cell {
   min-width: 300px;
   line-height: 1.4;
-  color: #000000;
+  color: #1a1a1a;
   font-weight: 500;
 }
 
 .emotion-cell {
   white-space: nowrap;
-  color: #000000;
+  color: #1a1a1a;
   font-weight: 500;
 }
 
@@ -83,12 +71,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #000000;
+  color: #1a1a1a;
 }
 
 .severity-cell {
   text-align: center;
-  color: #000000;
+  color: #1a1a1a;
   font-weight: 500;
 }
 
@@ -103,11 +91,11 @@
 
 /* LIME Analysis Button */
 .lime-toggle-btn {
-  background-color: #f0f7ff;
+  background-color: white;
   border: 1px solid #0066cc;
   color: #0066cc;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 0.85rem;
   transition: all 0.2s ease;
@@ -127,59 +115,66 @@ tr.expanded .lime-toggle-btn {
 /* LIME Analysis Content */
 .lime-content {
   padding: 1.5rem;
-  background-color: #ffffff;
-  border: 1px solid #d1d5db;
+  background-color: white;
+  border: 1px solid #e5e7eb;
   border-top: 2px solid #0066cc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .lime-section {
   margin-bottom: 1.5rem;
-  background: #ffffff;
-  padding: 1.25rem;
+  background: white;
+  padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.lime-section h4 {
-  color: #000000;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  border-bottom: 2px solid #0066cc;
-  padding-bottom: 0.5rem;
+.lime-section h3 {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.lime-section p {
+  color: #536471;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
 }
 
 .lime-words {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.75rem;
-  background: #ffffff;
+  gap: 0.5rem;
+  background: white;
   padding: 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .lime-word {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: white;
   font-size: 0.85rem;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.lime-word:hover {
+  border-color: #0066cc;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .lime-word .word {
   font-weight: 500;
-}
-
-.lime-word .importance {
-  font-family: monospace;
-  font-size: 0.8rem;
 }
 
 /* Tags and Entities */
@@ -198,6 +193,11 @@ tr.expanded .lime-toggle-btn {
   font-weight: 500;
 }
 
+.tag:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+}
+
 .entity-group {
   display: flex;
   align-items: center;
@@ -213,12 +213,20 @@ tr.expanded .lime-toggle-btn {
 }
 
 .entity-tag {
-  background-color: #e8f0fe;
+  background-color: white;
   color: #0066cc;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 500;
+  border: 1px solid #0066cc;
+  transition: all 0.2s ease;
+}
+
+.entity-tag:hover {
+  background-color: #0066cc;
+  color: white;
+  transform: translateY(-1px);
 }
 
 /* Hover effects */
@@ -247,19 +255,19 @@ tr.expanded .lime-toggle-btn {
 }
 
 .word-importance {
-  background: #ffffff;
+  background: white;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-top: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 2px solid #0066cc;
 }
 
 .word-importance-title {
-  color: #000000;
+  color: #1a1a1a;
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   border-bottom: 3px solid #0066cc;
   padding-bottom: 0.5rem;
   text-align: center;
@@ -278,40 +286,46 @@ tr.expanded .lime-toggle-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
-  background: #ffffff;
-  border-radius: 6px;
-  border: 1px solid #0066cc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.word-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .word-text {
-  color: #000000;
+  color: var(--text-primary);
   font-weight: 700;
   font-size: 1.125rem;
 }
 
 .importance-value {
-  color: #000000;
+  color: var(--text-primary);
   font-weight: 700;
-  padding: 0.5rem 1rem;
-  background: #e5e7eb;
-  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
   font-size: 1rem;
-  border: 1px solid #0066cc;
+  border: 1px solid var(--accent-main);
 }
 
 .positive {
-  color: #065f46;
-  background: #d1fae5;
-  border: 2px solid #34d399;
+  color: var(--graph-positive-text);
+  background: var(--graph-positive-bg);
+  border: 2px solid var(--graph-positive);
   font-weight: 700;
 }
 
 .negative {
-  color: #991b1b;
-  background: #fee2e2;
-  border: 2px solid #f87171;
+  color: var(--graph-negative-text);
+  background: var(--graph-negative-bg);
+  border: 2px solid var(--graph-negative);
   font-weight: 700;
 }
 

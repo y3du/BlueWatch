@@ -1,0 +1,32 @@
+/* Backup of original styles before changes */
+
+/* App.css original variables */
+.app-original-vars {
+  --primary-color: #00f7ff;
+  --secondary-color: #ff00ff;
+  --bg-color: #0a0a1a;
+  --card-bg: rgba(20, 20, 40, 0.8);
+  --text-glow: 0 0 10px rgba(0, 247, 255, 0.7);
+}
+
+/* App.css key colors */
+.app-original-colors {
+  background-color: #0B0B45;
+  color: rgb(255, 255, 255);
+  accent-color: #41FDFE;
+  border-color: rgba(65, 253, 254, 0.1);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
+}
+
+/* Login.css key colors */
+.login-original-colors {
+  background: #0B0B45;
+  form-background: rgba(11, 11, 69, 0.9);
+  text-color: #D3D3D3;
+  brand-color: #41FDFE;
+  input-background: rgba(211, 211, 211, 0.05);
+  input-border: rgba(65, 253, 254, 0.2);
+  button-background: #41FDFE;
+  button-text: #0B0B45;
+  button-hover: #D3D3D3;
+}

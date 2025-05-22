@@ -1,0 +1,75 @@
+.entity-table-container {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  grid-column: 1 / -1;
+}
+
+.entity-table-container h2 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.entity-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.entity-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.entity-table th,
+.entity-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.entity-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.entity-table td {
+  color: #536471;
+}
+
+.entity-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.entity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Print styles */
+@media print {
+  .entity-table-container {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .entity-table th {
+    background-color: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .entity-table th,
+  .entity-table td {
+    padding: 0.75rem;
+  }
+}

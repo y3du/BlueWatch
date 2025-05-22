@@ -285,10 +285,14 @@
   }
 
   /* Ensure proper page breaks */
-  .tweet-list,
+  .tweet-list {
+    break-before: page !important;
+  }
+
+  /* Prevent breaking inside large components */
   .network-graph,
   .emotion-graph,
   .severity-histogram {
-    break-before: page !important;
+    break-inside: avoid !important;
   }
 }

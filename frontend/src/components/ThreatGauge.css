@@ -1,6 +1,6 @@
 .threat-gauge {
   background: white;
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -31,10 +31,46 @@
 .gauge-value .value {
   font-size: 2.5rem;
   font-weight: bold;
+  color: #1a1a1a;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .gauge-value .label {
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
+  color: #536471;
+}
+
+/* Gauge specific styles */
+.gauge-arc {
+  stroke: #4ecdc4;
+}
+
+.gauge-arc-background {
+  stroke: #e5e7eb;
+}
+
+.threat-level-low {
+  color: #4ecdc4;
+}
+
+.threat-level-medium {
+  color: #ffd93d;
+}
+
+.threat-level-high {
+  color: #ff6b6b;
+}
+
+.gauge-value.threat-level-low .value {
+  text-shadow: 0 0 10px #4ecdc4;
+}
+
+.gauge-value.threat-level-medium .value {
+  text-shadow: 0 0 10px #ffd93d;
+}
+
+.gauge-value.threat-level-high .value {
+  text-shadow: 0 0 10px #ff6b6b;
 }

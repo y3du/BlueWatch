@@ -1,6 +1,8 @@
+@import '../theme.css';
+
 .dashboard {
-  padding: 20px;
-  background-color: #f5f8fa;
+  padding: var(--spacing-lg);
+  background-color: var(--bg-primary);
   min-height: 100vh;
 }
 
@@ -15,14 +17,14 @@
 }
 
 .dashboard-title {
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-size: 2rem;
   margin: 0;
 }
 
 .report-metadata {
-  margin: 15px 0;
-  color: #666;
+  margin: var(--spacing-md) 0;
+  color: var(--text-secondary);
 }
 
 .report-metadata p {
@@ -30,22 +32,23 @@
 }
 
 .generate-pdf-button {
-  background-color: #1da1f2;
-  color: white;
+  background-color: var(--accent-main);
+  color: var(--primary-dark);
   border: none;
-  border-radius: 30px;
+  border-radius: var(--radius-full);
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: var(--transition-main);
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .generate-pdf-button:hover {
-  background-color: #1991db;
+  background-color: var(--accent-light);
+  transform: translateY(-2px);
 }
 
 .generate-pdf-button:active {
@@ -58,16 +61,16 @@
   align-items: center;
   height: 100vh;
   font-size: 1.5rem;
-  color: #1da1f2;
+  color: var(--accent-main);
 }
 
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: var(--spacing-lg);
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md);
 }
 
 /* First row - UserCard and ThreatGauge */

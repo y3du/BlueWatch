@@ -4,12 +4,13 @@
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
+  border: 1px solid #e5e7eb;
 }
 
 .severity-histogram-container h2 {
   color: #1a1a1a;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
   text-align: center;
 }
 
@@ -20,26 +21,54 @@
 
 /* Tooltip styles */
 .severity-tooltip {
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
+  background: white;
+  border-radius: 6px;
   padding: 1rem;
-  color: white;
+  color: #1a1a1a;
   font-size: 0.9rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tooltip-range {
-  color: #4ecdc4;
+  color: #0066cc;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .tooltip-label {
-  color: #ffbb00;
+  color: #ffd93d;
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
 
 .tooltip-count {
   font-size: 0.85rem;
-  opacity: 0.9;
-} 
+  color: #536471;
+}
+
+/* Histogram specific styles */
+.severity-histogram .recharts-cartesian-grid line {
+  stroke: #e5e7eb !important;
+}
+
+.severity-histogram .recharts-cartesian-axis-line {
+  stroke: #1a1a1a !important;
+}
+
+.severity-histogram .recharts-cartesian-axis-tick-line {
+  stroke: #e5e7eb !important;
+}
+
+.severity-histogram .recharts-cartesian-axis-tick-value {
+  fill: #536471 !important;
+}
+
+.severity-histogram .recharts-bar-rectangle {
+  fill: #4ecdc4 !important;
+}
+
+.severity-histogram .recharts-bar-rectangle:hover {
+  fill: #0066cc !important;
+  filter: brightness(1.2);
+}
