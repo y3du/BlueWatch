@@ -1,8 +1,8 @@
-🌟 BlueWatch
+## 🌟 BlueWatch
 
 BlueWatch is a powerful full-stack web application that transforms data into actionable insights, likely focusing on social media sentiment or threat analysis. With a sleek React frontend and a robust Python backend, it delivers stunning visualizations and analytics through an intuitive dashboard. 🚀
 
-📋 Table of Contents
+## 📋 Table of Contents
 
 Overview
 Key Features
@@ -15,9 +15,9 @@ Contributing
 License
 Acknowledgements
 
-🌐 Overview
+## 🌐 Overview
 BlueWatch empowers users to input data, process it with advanced machine learning, and visualize results through dynamic charts and graphs. Whether analyzing emotions, detecting threats, or assessing severity, this app delivers insights via a centralized dashboard. Perfect for data enthusiasts and analysts alike! 📊
-✨ Key Features
+## ✨ Key Features
 
 🔒 User Authentication: Secure login and user management.
 📥 Data Input & Processing: Seamless data input through user-friendly forms.
@@ -35,7 +35,7 @@ Entity Tables
 🖼️ Dashboard: All analytics in one stunning interface.
 🌐 API Endpoints: RESTful API for smooth frontend-backend communication.
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 
 
@@ -60,33 +60,7 @@ Other Libraries
 Markdown, MarkupSafe, tqdm, spaCy, SymPy
 
 
-📂 Project Structure
-BlueWatch/
-│
-├── backend/                    🐍 Python backend (API, ML, data processing)
-│   ├── app.py                  🚀 Main backend application
-│   ├── venv/                   📦 Virtual environment (excluded from git)
-│   └── ...                     📄 Other backend files
-│
-├── frontend/                   ⚛️ React frontend
-│   └── src/
-│       ├── components/         🧩 React components
-│       │   ├── Dashboard.jsx
-│       │   ├── DataInputForm.css
-│       │   ├── EmotionBarGraph.css
-│       │   ├── ThreatGauge.css
-│       │   ├── SeverityHistogram.jsx
-│       │   ├── WordCloud.css
-│       │   ├── TimelineChart.css
-│       │   ├── NetworkGraph.css
-│       │   ├── EntityTable.jsx
-│       │   └── ...
-│       ├── theme.css           🎨 Global theme styles
-│       ├── print.css           🖨️ Print-specific styles
-│       └── backup_styles.css   📋 Backup styles
-│
-├── .gitignore                  🙈 Git ignore file
-└── README.md                   📖 This file
+
 
 ## 📸 Screenshots
 
@@ -177,19 +151,25 @@ A powerful full-stack web application for real-time sentiment, threat, and entit
 
 ```
 BlueWatch/
+├── backend/                  # Python backend (API, ML, data processing)
+│   ├── app.py                # Main backend application
+│   ├── requirements.txt      # Python dependencies
+│   └── ...                   # Other backend files and folders
 │
-├── backend/      # Python backend (API, ML, data processing)
-│   ├── app.py    # Main backend application
+├── frontend/                 # React frontend (UI, visualizations)
+│   └── src/
+│       └── components/
+│           ├── Dashboard.jsx
+│           ├── EmotionBarGraph.css
+│           ├── ...           # Other React components
+│
+├── screenshots/              # Project screenshots
+│   ├── 1.png
+│   ├── 2.png
 │   └── ...
 │
-├── frontend/     # React frontend (UI, visualizations)
-│   └── src/components/
-│       ├── Dashboard.jsx
-│       ├── EmotionBarGraph.css
-│       ├── ...
-│
-├── .gitignore
-└── README.md
+├── .gitignore                # Git ignore file
+└── README.md                 # Project documentation
 ```
 
 ---
