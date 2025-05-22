@@ -224,6 +224,6 @@ MIT License
 ## 🙏 Acknowledgements
 
 **Libraries:** PyTorch, TensorFlow, React.js, spaCy, SymPy  
-[Add any datasets or collaborators you wish to thank]
+
 
 ---
